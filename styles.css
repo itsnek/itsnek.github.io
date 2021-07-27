@@ -20,6 +20,10 @@ html, body{
     margin: 0;
 }
 
+.header{
+    text-align: center;
+}
+
 /* Home */
 
 /* cursor animations */
@@ -48,7 +52,7 @@ html, body{
     }
 }
 
-h2.name span.input-cursor{
+.name span.input-cursor{
     animation: blink 600ms linear;
     animation-iteration-count: 7;
     color: rgba(0,255,0,.75);
@@ -56,20 +60,20 @@ h2.name span.input-cursor{
 
 .navigationlist {
     margin: 0;
-    width: 50%;
+    max-width: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    left: 23%;
+    left: calc(50% - 270px);
 }
 
 .navigationlist .folder-collection{
     display: inline-block;
 }
 
-.folder-collection .n{
+.n{
     box-sizing: border-box;
     padding: 10px 20px;
     font-size: 20px;
@@ -99,14 +103,14 @@ h2.name span.input-cursor{
     margin: 0;
 }
 
-.folder-collection .n:hover{
+.n:hover{
     opacity: 1;
     background-color: rgb(255,255,255,.2);
     color: rgb(255,255,255,.8) ;
     transition: 0.4s;
 }
 
-.folder-collection .fake-button:hover{
+.fake-button:hover{
     opacity: 1;
     background-color: rgb(255,255,255,.2);
     color: rgb(255,255,255,.8) ;
@@ -144,35 +148,28 @@ h2.name span.input-cursor{
     margin: 0;
 }
 
-.folder-collection:hover .subnavigationlist { 
+.folder-collection:hover .subnavigationlist{ 
     display: table;
     list-style-type: none;
 }
 
 .folder-collection:hover .subnavigationlist#second { 
-    margin-left: -50px;
+    margin-left: -30px;
 }
 
 .folder-collection:hover .subnavigationlist#first { 
     margin-left: -10px;
 }
 
-h1.logo-image {
-    background-image: url("./images/p1090594-logo.JPG");
+.logo-image {
     background-size: contain;
-    width: 370px;
-    height: 398.5px;
     border: 5px;
     border-radius: 25px;
-    box-shadow: 0px 10px 15px 5px;
-    position: relative;
+    box-shadow: 0px 10px 15px 5px black;
     margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
-h2.name {
+.name {
     text-align: center;
     color : rgb(255, 255, 255);
     font-size: 40px;
@@ -184,7 +181,7 @@ h2.name {
     margin-right: auto;
 }
 
-h2.name span.my-name{
+.name span.my-name{
     color: rgb(255, 255, 255 , .4)
 }
 
@@ -217,15 +214,21 @@ h2.name span.my-name{
 
 .contact-list{
     width: 35%;
+    min-width: 240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* align-items: center; */
     flex-wrap: wrap;
     margin-left: -50px;
 }
 
 .contact-list li{
     list-style: none;
+}
+
+#github{
+    margin-top: 5px;
 }
 
 .link{
@@ -397,3 +400,158 @@ img#gmail:hover + div > .tooltiptext{
     transition: 1s;
     left: 0;
 } */
+
+
+/* -- Scrollbar -- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #a9a9a9; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(75, 75, 75); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(70, 50, 72); 
+  }
+  
+  @media only screen and (max-width: 600px) {
+ 
+    .logo-image {
+        width: 35vw;
+        height: auto;
+    }
+
+    .name{
+        font-size: 28px;
+    }
+    
+    .tabcontent{
+        font-size: 12px;
+    }
+
+    .navigationlist {
+        flex-direction: column;
+    }
+
+    .n, .fake-button{
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top: 1px solid;
+        font-size: 3vw;
+    }
+
+    .fake-button{
+        border-bottom: 1px solid;
+        border-radius: 0;
+    }
+
+    .tablinks{ 
+        font-size: 3vw;
+    }
+
+    .who{
+        font-size: 5vw;
+    }
+    
+    .subnavigationlist a{ 
+        font-size: 3vw;
+    }
+
+    .subnavigationlist a:hover{ 
+        font-size: calc(3vw + 2px);
+    }
+
+    .folder-collection:hover .subnavigationlist { 
+        display: table;
+        list-style-type: none;
+    }
+
+    .folder-collection{
+        font-size: 20px;
+    }
+
+    .subnavigationlist#first { 
+        margin-right: 30px;
+    }
+
+    .folder-collection:hover .subnavigationlist { 
+        display: inline-block;
+        text-align: center;
+    }
+
+    #gmail + div{
+        display: none;
+    }
+
+    #gmail:hover + div{
+        display: none;
+    }
+
+    .contact-list{
+        justify-content: space-between;
+    }
+
+  }
+
+  @media only screen and (max-width: 1000px) and (min-width: 600px) {
+
+    .logo-image {
+        width: 35vw;
+        height: auto;
+    }
+
+    .name{
+        font-size: 4vw;
+    }
+
+    .subnavigationlist a{ 
+        font-size: 2vw;
+    }
+    
+    .subnavigationlist a:hover{ 
+        font-size: calc(2vw + 1px);
+    }
+
+    .tablinks{ 
+        font-size: 2vw;
+    }
+
+    .who{
+        font-size: 4vw;
+    }
+
+    .tabcontent{
+        font-size: 14px;
+    }
+/* 
+    .navigationlist {
+        max-width: ;
+    } */
+
+    .n , .fake-button{
+        font-size: 2vw;
+    }
+    
+    #gmail + div{
+        display: none;
+    }
+
+    #gmail:hover + div{
+        display: none;
+    }
+
+  }

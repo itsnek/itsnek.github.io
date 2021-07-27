@@ -83,6 +83,7 @@ function copy_mail(){
   document.getElementById("mail_text").select();
   document.execCommand("copy");
   console.log("copied!");
+  alert("Mail copied succesfully.")
 }
 
 function scroller(){
