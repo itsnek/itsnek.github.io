@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Yomogi&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: Raleway;
+}
+
+html{    
+    background-image: url("./Images/black-screen-1920x1080-awesome-black-screen-wallpaper-wallpapersafari-for-you-of-black-screen-1920x1080.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size:auto;
+}
+
+html, body{
+    margin: 0;
+}
+
+/* Home */
+
+/* cursor animations */
+@keyframes  blink {
+    from {
+        color: rgba(0,255,0,.75);
+    }
+    to {
+       color: transparent;
+    }
+ }
+  @-webkit-keyframes blink {
+    from {
+        color: rgba(0,255,0,.75);
+    }
+    to {
+       -webkit-color: transparent;
+    }
+ }
+  @-ms-keyframes blink {
+    from {
+        color: rgba(0,255,0,.75);
+    }
+    to {
+       -ms-color: transparent;
+    }
+}
+
+h2.name span.input-cursor{
+    animation: blink 600ms linear;
+    animation-iteration-count: 7;
+    color: rgba(0,255,0,.75);
+}
+
+.navigationlist {
+    margin: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    left: 23%;
+}
+
+.navigationlist .folder-collection{
+    display: inline-block;
+}
+
+.folder-collection .n{
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: gray;
+    text-decoration: none;
+    background-color:transparent;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.fake-button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    padding: 10px 20px;
+    font-size: 20px;
+    color: gray;
+    border-style: groove;
+    border-left-color: gray;
+    border-top-color: gray;
+    border-right-color: rgb(78, 78, 78,.08);
+    border-bottom-color: rgb(46,46,46,.08);
+    text-decoration: none;
+    background-color:transparent;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.folder-collection .n:hover{
+    opacity: 1;
+    background-color: rgb(255,255,255,.2);
+    color: rgb(255,255,255,.8) ;
+    transition: 0.4s;
+}
+
+.folder-collection .fake-button:hover{
+    opacity: 1;
+    background-color: rgb(255,255,255,.2);
+    color: rgb(255,255,255,.8) ;
+    transition: 0.4s;
+}
+
+.subnav {
+    margin-top: 5px;
+    line-height:185%;
+}
+
+.subnav .page-collection{
+    margin: 12px;
+}
+
+.subnav a{
+    padding: 5px 10px;
+    font-size: 18px;
+    color: gray;
+    text-decoration: none;
+}
+
+.subnav a:hover{
+    padding: 7px 12px;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255,255,255,.8) ;
+    border-radius: 25px;
+    transition: 0.7s;
+}
+
+.folder-collection .subnavigationlist{
+    display: none;
+    text-align: start;
+    margin: 0;
+}
+
+.folder-collection:hover .subnavigationlist { 
+    display: table;
+    list-style-type: none;
+}
+
+.folder-collection:hover .subnavigationlist#second { 
+    margin-left: -50px;
+}
+
+.folder-collection:hover .subnavigationlist#first { 
+    margin-left: -10px;
+}
+
+h1.logo-image {
+    background-image: url("./Images/P1090594-logo.jpg");
+    background-size: contain;
+    width: 370px;
+    height: 398.5px;
+    border: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 15px 5px;
+    position: relative;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h2.name {
+    text-align: center;
+    color : rgb(255, 255, 255);
+    font-size: 40px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.name span.my-name{
+    color: rgb(255, 255, 255 , .4)
+}
+
+/* Contact */
+
+.contact-list a{
+    color: rgb(255, 255, 255, .9);
+}
+
+.contact-options{
+    color: rgb(255, 255, 255, .9);
+    margin-top: 20%;
+    text-align: center;
+    font-size: 23px;
+}
+
+#contact{
+    position: relative;
+    bottom: 20px;
+    text-align:center;
+}
+
+.centered{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.contact-list{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -50px;
+}
+
+.contact-list li{
+    list-style: none;
+}
+
+.link{
+    display: inline-block;
+}
+
+.link:hover{
+    transform: scale(1.3);
+    transition: 0.4s;
+}
+
+.tooltiptext {
+    display: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align:center;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    padding: 5px 5px;
+    z-index: 1;
+    position: relative;
+    bottom: 80px;
+    left: 100px;
+    overflow: hidden;
+}
+
+img#gmail + div{
+    visibility: hidden;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+img#gmail:hover + div{
+    visibility: visible;
+    opacity: 1;
+}
+
+img#gmail:hover + div > .tooltiptext{
+    display: block;
+}
+
+.tooltiptext::selection{
+    color: inherit;
+}
+
+.tabcontent span.marker{
+    color: rgba(0,255,0,.75);
+}
+
+.who{
+    position: relative;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.tabs {
+    overflow: hidden;
+    background-color: inherit;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: auto;
+    text-align: center;
+}
+    
+.tablinks {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 21px;
+    border-radius: 25px;
+    transition: 0.6s;
+    color: rgb(255, 255, 255, .7);
+}
+
+.tablinks:hover {
+    background-color: rgb(255, 255, 255, .1);
+}
+
+.tablinks.active {
+    background-color: rgba(102, 51, 153, 0.699);
+    color: white;
+    text-shadow: 0px 0px 5px #ced0d3;
+    transition: 0.6s;
+}
+
+.tabcontent {
+    display: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    color: honeydew;
+    border-top: none;
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+}
+
+.tabcontent #link{
+    text-decoration: none;
+    color: rgba(136, 94, 179, 0.699);
+}
+
+.tabcontent #link:hover{
+    text-decoration: none;
+    color: rgba(39, 211, 54, 0.693);;
+    transition: 0.4s
+}
+
+.catchy_phrase{
+    font-style: italic;
+    font-family: 'Yomogi', cursive;
+}
+
+.anchor{
+    display: block;
+    height: 115px; /*same height as header*/
+    margin-top: -115px; /*same height as header*/
+    visibility: hidden;
+}
+
+/* footer */
+
+.main_footer{
+    visibility: hidden;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-family: Roboto Condensed;
+    font-size: 13px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color:rgba(30, 30, 30, 0.9);
+    color: rgba(240, 255, 240, 0.5);
+    opacity: 0;
+    transition: opacity 1s;
+    /* animation: come-in 1s ease forwards; */
+}
+
+/* 
+@keyframes come-in {
+  from {height: 0;}
+  to {height: fit-content;}
+} */
+
+.reference{
+    text-decoration: none;
+    color: rgba(252, 252, 252, 0.8);
+    font-family: Roboto Condensed;
+    font-size: 13px;
+}
+
+.reference:hover{
+    color: rgb(120, 48, 130);
+    transition: 0.3s;
+}
+
+/* main:hover + .main_footer{
+    transition: 1s;
+    left: 0;
+} */
