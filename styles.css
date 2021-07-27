@@ -218,7 +218,6 @@ html, body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: center; */
     flex-wrap: wrap;
     margin-left: -50px;
 }
@@ -401,7 +400,6 @@ img#gmail:hover + div > .tooltiptext{
     left: 0;
 } */
 
-
 /* -- Scrollbar -- */
 
 /* width */
@@ -425,6 +423,7 @@ img#gmail:hover + div > .tooltiptext{
     background: rgb(70, 50, 72); 
   }
   
+  /* -- Mobiles -- */
   @media only screen and (max-width: 600px) {
  
     .logo-image {
@@ -442,6 +441,10 @@ img#gmail:hover + div > .tooltiptext{
 
     .navigationlist {
         flex-direction: column;
+        align-items: stretch;
+        /* align-items: center; */
+        position: static;
+        margin-right: 35px;
     }
 
     .n, .fake-button{
@@ -463,7 +466,7 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 3vw;
     }
 
-    .who{
+    .who, .contact-options{
         font-size: 5vw;
     }
     
@@ -475,9 +478,8 @@ img#gmail:hover + div > .tooltiptext{
         font-size: calc(3vw + 2px);
     }
 
-    .folder-collection:hover .subnavigationlist { 
-        display: table;
-        list-style-type: none;
+    .folder-collection:hover::after .subnavigationlist { 
+    
     }
 
     .folder-collection{
@@ -505,6 +507,12 @@ img#gmail:hover + div > .tooltiptext{
         justify-content: space-between;
     }
 
+    .main_footer, .reference{
+        height: fit-content;
+        font-size: 10px;
+    }
+
+
   }
 
   @media only screen and (max-width: 1000px) and (min-width: 600px) {
@@ -523,14 +531,14 @@ img#gmail:hover + div > .tooltiptext{
     }
     
     .subnavigationlist a:hover{ 
-        font-size: calc(2vw + 1px);
+        font-size: calc(2vw + 2px);
     }
 
     .tablinks{ 
         font-size: 2vw;
     }
 
-    .who{
+    .who, .contact-options{
         font-size: 4vw;
     }
 
@@ -552,6 +560,10 @@ img#gmail:hover + div > .tooltiptext{
 
     #gmail:hover + div{
         display: none;
+    }
+
+    .main_footer, .reference{
+        font-size: 12px;
     }
 
   }
