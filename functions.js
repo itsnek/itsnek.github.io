@@ -86,7 +86,6 @@ function copy_mail(){
 }
 
 function scroller(){
-  console.log("mphka")
   let footer = document.getElementById("main_footer");
   footer.style.visibility = "visible";
   footer.style.opacity = "1";
