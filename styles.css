@@ -358,6 +358,29 @@ img#gmail:hover + div > .tooltiptext{
     visibility: hidden;
 }
 
+.Portofolio{
+    text-align: center;
+}
+
+.downloadable{
+    color: rgba(252, 252, 252, 0.8);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    /* left: 16%; */
+    top: 20px;
+}
+
+.downloadable:hover{
+    color: rgba(102, 51, 153, 0.699);
+    transition: 0.4s;
+}
+
+#download_icon{
+    margin-bottom: -5px;
+    margin-left: -5px;
+}
+
 /* footer */
 
 .main_footer{
@@ -439,6 +462,12 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 12px;
     }
 
+    .downloadable{
+        font-size: 12px;
+        position: relative;
+        top: -5px;
+    }
+
     .navigationlist {
         flex-direction: column;
         align-items: stretch;
@@ -476,10 +505,6 @@ img#gmail:hover + div > .tooltiptext{
 
     .subnavigationlist a:hover{ 
         font-size: calc(3vw + 2px);
-    }
-
-    .folder-collection:hover::after .subnavigationlist { 
-    
     }
 
     .folder-collection{
@@ -542,7 +567,7 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 4vw;
     }
 
-    .tabcontent{
+    .tabcontent,.downloadable{
         font-size: 14px;
     }
 /* 
