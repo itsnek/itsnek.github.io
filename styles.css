@@ -143,13 +143,19 @@ html, body{
 }
 
 .folder-collection .subnavigationlist{
-    display: none;
+    visibility: hidden;
+    display: table-cell;
+    opacity:0;
     text-align: start;
     margin: 0;
+    padding: 0px 5px 0px 15px;
+    transition: opacity 0.4s;
 }
 
 .folder-collection:hover .subnavigationlist{ 
-    display: table;
+    visibility: visible;
+    /* display: table-cell; */
+    opacity:1;
     list-style-type: none;
 }
 
@@ -466,6 +472,17 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 12px;
         position: relative;
         top: -5px;
+    }
+
+    .folder-collection .subnavigationlist{
+        display: none;
+        padding: 0;
+    }
+
+    .folder-collection:hover .subnavigationlist{
+        display: inline-block;
+        text-align: center;
+        padding-left: 30px;
     }
 
     .navigationlist {
