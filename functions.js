@@ -4,6 +4,7 @@ window.addEventListener('load',function(){
   let tab2 = document.getElementById("BtnFAQs");
   let tab3 = document.getElementById("BtnIllustrations");
   let tab4 = document.getElementById("BtnUni Research");
+  let footer = document.getElementById("main_footer");
 
   onLoading();
 
@@ -16,8 +17,16 @@ window.addEventListener('load',function(){
   tab4.addEventListener('click', () => showContent("Uni Research"));
 
   document.getElementById("gmail").addEventListener('click', () => copy_mail());
-  // footer.style.visibility = "hidden";
+
   window.addEventListener('scroll', () => scroller());
+
+  window.addEventListener('mousemove', () => scroller());
+
+  window.addEventListener("mouseout",() => {
+      setTimeout(function(){
+        footer.style.opacity = "0";
+    }, 5000);
+  });
 
 });
 
@@ -90,6 +99,7 @@ function scroller(){
   let footer = document.getElementById("main_footer");
   footer.style.visibility = "visible";
   footer.style.opacity = "1";
+  
   // footer.style.bottom = "0";
   // footer.style.transition = "1s";
 }

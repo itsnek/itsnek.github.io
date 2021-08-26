@@ -406,12 +406,6 @@ img#gmail:hover + div > .tooltiptext{
     /* animation: come-in 1s ease forwards; */
 }
 
-/* 
-@keyframes come-in {
-  from {height: 0;}
-  to {height: fit-content;}
-} */
-
 .reference{
     text-decoration: none;
     color: rgba(252, 252, 252, 0.8);
@@ -424,37 +418,32 @@ img#gmail:hover + div > .tooltiptext{
     transition: 0.3s;
 }
 
-/* main:hover + .main_footer{
-    transition: 1s;
-    left: 0;
-} */
-
 /* -- Scrollbar -- */
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #a9a9a9; 
-  }
+/* Track */
+::-webkit-scrollbar-track {
+background: #a9a9a9; 
+}
    
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(75, 75, 75); 
-    border-radius: 5px;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(75, 75, 75); 
+border-radius: 5px;
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(70, 50, 72); 
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(70, 50, 72); 
+}
   
-  /* -- Mobiles -- */
-  @media only screen and (max-width: 600px) {
- 
+/* -- Mobiles -- */
+@media only screen and (max-width: 600px) {
+
     .logo-image {
         width: 35vw;
         height: auto;
@@ -463,7 +452,7 @@ img#gmail:hover + div > .tooltiptext{
     .name{
         font-size: 28px;
     }
-    
+
     .tabcontent{
         font-size: 12px;
     }
@@ -515,7 +504,7 @@ img#gmail:hover + div > .tooltiptext{
     .who, .contact-options{
         font-size: 5vw;
     }
-    
+
     .subnavigationlist a{ 
         font-size: 3vw;
     }
@@ -554,10 +543,10 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 10px;
     }
 
+}
 
-  }
-
-  @media only screen and (max-width: 1000px) and (min-width: 600px) {
+/* Tablets and Desktop */
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
 
     .logo-image {
         width: 35vw;
@@ -571,7 +560,7 @@ img#gmail:hover + div > .tooltiptext{
     .subnavigationlist a{ 
         font-size: 2vw;
     }
-    
+
     .subnavigationlist a:hover{ 
         font-size: calc(2vw + 2px);
     }
@@ -587,15 +576,11 @@ img#gmail:hover + div > .tooltiptext{
     .tabcontent,.downloadable{
         font-size: 14px;
     }
-/* 
-    .navigationlist {
-        max-width: ;
-    } */
 
     .n , .fake-button{
         font-size: 2vw;
     }
-    
+
     #gmail + div{
         display: none;
     }
@@ -608,4 +593,4 @@ img#gmail:hover + div > .tooltiptext{
         font-size: 12px;
     }
 
-  }
+}
