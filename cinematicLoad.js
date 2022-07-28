@@ -39,6 +39,6 @@ function typeWriter() {
 
     }
     setTimeout(typeWriter,speed);
-    name.style.fontFamily= "Titillium Web";
+    name.style.fontFamily= "Raleway"; // Titillium Web
     name.style.textShadow= "0px 0px 10px #000000"
 }
