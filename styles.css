@@ -14,8 +14,8 @@ html{
     height: 100%;
     background-position: center;
     background-size:auto; */
-    background-color: #0b8793; /* For browsers that do not support gradients */ /* couple love: #3a6186, #89253e  */
-    background-image: linear-gradient(to bottom right, #360033, #0b8793);
+    background-color: #0b8793; /* For browsers that do not support gradients */ /* 0b8793 couple love: #3a6186, #89253e  */
+    background-image: linear-gradient(to bottom right, #360033, #0b937a);
 }
 
 html, body{
@@ -46,7 +46,7 @@ html, body{
 /* cursor animations */
 @keyframes  blink {
     from {
-        color: rgba(0,255,0,.75);
+        color: rgba(0, 255, 174, 0.75);;
     }
     to {
        color: transparent;
@@ -54,7 +54,7 @@ html, body{
  }
   @-webkit-keyframes blink {
     from {
-        color: rgba(0,255,0,.75);
+        color: rgba(0, 255, 174, 0.75);
     }
     to {
        -webkit-color: transparent;
@@ -62,7 +62,7 @@ html, body{
  }
   @-ms-keyframes blink {
     from {
-        color: rgba(0,255,0,.75);
+        color: rgba(0, 255, 174, 0.75);;
     }
     to {
        -ms-color: transparent;
@@ -72,7 +72,7 @@ html, body{
 .name span.input-cursor{
     animation: blink 600ms linear;
     animation-iteration-count: 7;
-    color: rgba(0,255,0,.75);
+    color: rgba(0, 255, 174, 0.75);
 }
 
 .navigationlist {
@@ -94,8 +94,10 @@ html, body{
     box-sizing: border-box;
     padding: 10px 20px;
     font-size: 20px;
-    color: gray;
+    color: rgb(255, 255, 255, 0.8);
     text-decoration: none;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.3);
     background-color:transparent;
     border-radius: 20px;
     margin: 0;
@@ -108,22 +110,20 @@ html, body{
 
     padding: 10px 20px;
     font-size: 20px;
-    color: gray;
-    border-style: groove;
-    border-left-color: gray;
-    border-top-color: gray;
-    border-right-color: rgb(78, 78, 78,.08);
-    border-bottom-color: rgb(46,46,46,.08);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.3);
+
     text-decoration: none;
     background-color:transparent;
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 0;
 }
 
 .n:hover{
     opacity: 1;
     background-color: rgb(255,255,255,.2);
-    color: rgb(255,255,255,.8) ;
+    /* color: rgb(255,255,255,.8) ; */
     transition: 0.4s;
 }
 
@@ -146,14 +146,14 @@ html, body{
 .subnav a{
     padding: 5px 10px;
     font-size: 18px;
-    color: gray;
+    color: rgb(255,255,255,.8);
     text-decoration: none;
 }
 
 .subnav a:hover{
     padding: 7px 12px;
     font-size: 19px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255,255,255,.8) ;
     border-radius: 25px;
     transition: 0.7s;
@@ -227,6 +227,7 @@ html, body{
     position: relative;
     bottom: 20px;
     text-align:center;
+    /* margin-bottom: 5%; */
 }
 
 .centered{
@@ -245,6 +246,7 @@ html, body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: -50px;
+    /* padding-top: 35px; */
 }
 
 .contact-list li{
@@ -275,9 +277,9 @@ html, body{
     border: none;
     padding: 5px 5px;
     z-index: 1;
-    position: relative;
-    bottom: 80px;
-    left: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 35px;
     overflow: hidden;
 }
 
@@ -294,7 +296,7 @@ img#gmail:hover + div{
 }
 
 img#gmail:hover + div > .tooltiptext{
-    display: block;
+    display:block;
 }
 
 .tooltiptext::selection{
@@ -302,7 +304,7 @@ img#gmail:hover + div > .tooltiptext{
 }
 
 .tabcontent span.marker{
-    color: rgba(0,255,0,.75);
+    color: rgba(0, 255, 174, 0.75);
 }
 
 .who{
@@ -342,7 +344,7 @@ img#gmail:hover + div > .tooltiptext{
 }
 
 .tablinks.active {
-    background-color: rgba(102, 51, 153, 0.699);
+    background-color: #360033c7;
     color: white;
     text-shadow: 0px 0px 5px #ced0d3;
     transition: 0.6s;
@@ -352,7 +354,7 @@ img#gmail:hover + div > .tooltiptext{
     display: none;
     font-size: 20px;
     padding: 6px 12px;
-    color: honeydew;
+    color:rgba(255, 255, 255, 0.85);
     border-top: none;
     position: relative;
     margin-left: 15%;
@@ -362,12 +364,12 @@ img#gmail:hover + div > .tooltiptext{
 
 .tabcontent #link{
     text-decoration: none;
-    color: rgba(136, 94, 179, 0.699);
+    color: #360033;
 }
 
 .tabcontent #link:hover{
     text-decoration: none;
-    color: rgba(39, 211, 54, 0.693);;
+    color: #0b9388;
     transition: 0.4s
 }
 
@@ -388,7 +390,7 @@ img#gmail:hover + div > .tooltiptext{
 }
 
 .downloadable{
-    color: rgba(252, 252, 252, 0.8);
+    color: #360033;
     text-decoration: none;
     text-align: center;
     position: relative;
@@ -397,7 +399,7 @@ img#gmail:hover + div > .tooltiptext{
 }
 
 .downloadable:hover{
-    color: rgba(102, 51, 153, 0.699);
+    color: #0b9388;
     transition: 0.4s;
 }
 
@@ -503,11 +505,11 @@ background: rgb(70, 50, 72);
 
     .n, .fake-button{
         width: 100%;
-        border: 0;
         border-radius: 0;
+        border-color: rgba(255, 255, 255, 0.25);
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
-        border-top: 1px solid;
+        border: 1px solid;
         font-size: 3vw;
     }
 
