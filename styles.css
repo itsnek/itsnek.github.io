@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
 
 *{
     box-sizing: border-box;
@@ -192,29 +193,43 @@ html, body{
 }
 
 .logo-image {
+    box-sizing: border-box;
+    width: 13%;
+    max-width: 300px;
+    height: auto;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(5px);
     background-size: contain;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.6);
-    margin-top: 10%;
+    position: absolute;
+    left: 8%;
+    top: 10%;
 }
 
 .name {
-    text-align: center;
+    /* text-align: center; */
     color : rgb(255, 255, 255);
-    font-size: 40px;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 50%;
+    font-size: 2vw;
+    position: absolute;
+    left: 22vw;
+    top: 15%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .name span.my-name{
     color: rgb(255, 255, 255 , 0.8)
+}
+
+.job {
+    font-family: 'Montserrat';
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1vw;
+    position: absolute;
+    left: 22vw;
+    top: 22%;
 }
 
 /* Contact */
@@ -472,14 +487,14 @@ background: rgb(70, 50, 72);
 /* -- Mobiles -- */
 @media only screen and (max-width: 600px) {
 
-    .logo-image {
+    /* .logo-image {
         width: 35vw;
         height: auto;
-    }
+    } */
 
-    .name{
+    /* .name{
         font-size: 28px;
-    }
+    } */
 
     .tabcontent{
         font-size: 12px;
@@ -576,14 +591,14 @@ background: rgb(70, 50, 72);
 /* Tablets and Desktop */
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
 
-    .logo-image {
+    /* .logo-image {
         width: 35vw;
         height: auto;
-    }
+    } */
 
-    .name{
+    /* .name{
         font-size: 4vw;
-    }
+    } */
 
     .subnavigationlist a{ 
         font-size: 2vw;
