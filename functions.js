@@ -3,7 +3,7 @@ window.addEventListener('load',function(){
   let tab1 = document.getElementById("BtnBio");
   let tab2 = document.getElementById("BtnFAQs");
   let tab3 = document.getElementById("BtnIllustrations");
-  let tab4 = document.getElementById("BtnUni Research");
+  let tab4 = document.getElementById("BtnAcademics");
   let footer = document.getElementById("main_footer");
 
   onLoading();
@@ -14,7 +14,7 @@ window.addEventListener('load',function(){
 
   tab3.addEventListener('click', () => showContent("Illustrations"));
 
-  tab4.addEventListener('click', () => showContent("Uni Research"));
+  tab4.addEventListener('click', () => showContent("Academics"));
 
   document.getElementById("gmail").addEventListener('click', () => copy_mail());
 
@@ -35,11 +35,11 @@ function showContent(tab){
   let bio_tab = document.getElementById("Bio_tab");
   let FAQs_tab = document.getElementById("FAQs_tab");
   let Illustrations_tab = document.getElementById("Illustrations_tab");
-  let Uni_Research_tab = document.getElementById("Uni_Research_tab"); 
+  let Academics_tab = document.getElementById("Academics_tab"); 
   let btn1 = document.getElementById("BtnBio"); 
   let btn2 = document.getElementById("BtnFAQs"); 
   let btn3 = document.getElementById("BtnIllustrations"); 
-  let btn4 = document.getElementById("BtnUni Research"); 
+  let btn4 = document.getElementById("BtnAcademics"); 
 
   if(tab==="Bio" || tab==="FAQs"){
 
@@ -62,14 +62,14 @@ function showContent(tab){
 
     if(tab === "Illustrations"){
       Illustrations_tab.style.display = "block";
-      Uni_Research_tab.style.display = "none";
+      Academics_tab.style.display = "none";
       if(!btn3.className.includes(" active")){
         btn3.className += " active";
         btn4.className = btn1.className.replace(" active", "");
       }
     }
-    else if(tab === "Uni Research"){
-        Uni_Research_tab.style.display="block";
+    else if(tab === "Academics"){
+        Academics_tab.style.display="block";
         Illustrations_tab.style.display="none";
         btn4.className += " active";
         btn3.className = btn1.className.replace(" active", "");
