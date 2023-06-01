@@ -2,7 +2,7 @@ window.addEventListener('load',function(){
 
   let tab1 = document.getElementById("BtnBio");
   let tab2 = document.getElementById("BtnFAQs");
-  let tab3 = document.getElementById("BtnIllustrations");
+  let tab3 = document.getElementById("BtnImplementations");
   let tab4 = document.getElementById("BtnAcademics");
   let footer = document.getElementById("main_footer");
 
@@ -12,7 +12,7 @@ window.addEventListener('load',function(){
   
   tab2.addEventListener('click', () => showContent("FAQs"));
 
-  tab3.addEventListener('click', () => showContent("Illustrations"));
+  tab3.addEventListener('click', () => showContent("Implementations"));
 
   tab4.addEventListener('click', () => showContent("Academics"));
 
@@ -34,11 +34,11 @@ function showContent(tab){
 
   let bio_tab = document.getElementById("Bio_tab");
   let FAQs_tab = document.getElementById("FAQs_tab");
-  let Illustrations_tab = document.getElementById("Illustrations_tab");
+  let Implementations_tab = document.getElementById("Implementations_tab");
   let Academics_tab = document.getElementById("Academics_tab"); 
   let btn1 = document.getElementById("BtnBio"); 
   let btn2 = document.getElementById("BtnFAQs"); 
-  let btn3 = document.getElementById("BtnIllustrations"); 
+  let btn3 = document.getElementById("BtnImplementations"); 
   let btn4 = document.getElementById("BtnAcademics"); 
 
   if(tab==="Bio" || tab==="FAQs"){
@@ -60,8 +60,8 @@ function showContent(tab){
 
   }else{
 
-    if(tab === "Illustrations"){
-      Illustrations_tab.style.display = "block";
+    if(tab === "Implementations"){
+      Implementations_tab.style.display = "block";
       Academics_tab.style.display = "none";
       if(!btn3.className.includes(" active")){
         btn3.className += " active";
@@ -70,7 +70,7 @@ function showContent(tab){
     }
     else if(tab === "Academics"){
         Academics_tab.style.display="block";
-        Illustrations_tab.style.display="none";
+        Implementations_tab.style.display="none";
         btn4.className += " active";
         btn3.className = btn1.className.replace(" active", "");
     }
@@ -83,8 +83,8 @@ function onLoading(){
   document.getElementById("Bio_tab").style.display = "block";
   document.getElementById("BtnBio").className += " active";
 
-  document.getElementById("Illustrations_tab").style.display = "block";
-  document.getElementById("BtnIllustrations").className += " active";
+  document.getElementById("Implementations_tab").style.display = "block";
+  document.getElementById("BtnImplementations").className += " active";
 
 }
 
