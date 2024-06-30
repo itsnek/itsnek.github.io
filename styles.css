@@ -77,13 +77,13 @@ html, body{
 
 .navigationlist {
     margin: 0;
-    max-width: 500px;
+    max-width: 550px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    left: calc(50% - 270px);
+    left: calc(50% - 300px);
 }
 
 .navigationlist .folder-collection{
@@ -401,6 +401,10 @@ img#gmail:hover + div > .tooltiptext{
 #download_icon{
     margin-bottom: -5px;
     margin-left: -5px;
+}
+
+b.bold{
+    color: #fff;
 }
 
 /* footer */
