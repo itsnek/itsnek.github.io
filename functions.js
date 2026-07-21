@@ -1,13 +1,7 @@
 window.addEventListener('load', function () {
 
-  let tab1 = document.getElementById("BtnBio");
-  let tab2 = document.getElementById("BtnFAQs");
-  let tab3 = document.getElementById("BtnImplementations");
-  let tab4 = document.getElementById("BtnAcademics");
   let footer = document.getElementById("main_footer");
   let copyrightYear = document.getElementById("copyright-year");
-
-  onLoading();
 
   if (copyrightYear) {
     let startYear = 2021;
@@ -16,14 +10,6 @@ window.addEventListener('load', function () {
       ? "Copyright " + startYear + "-" + currentYear
       : "Copyright " + startYear;
   }
-
-  tab1.addEventListener('click', () => showContent("Bio"));
-
-  tab2.addEventListener('click', () => showContent("FAQs"));
-
-  tab3.addEventListener('click', () => showContent("Implementations"));
-
-  tab4.addEventListener('click', () => showContent("Academics"));
 
   document.getElementById("gmail").addEventListener('click', () => copy_mail());
 
@@ -50,16 +36,19 @@ window.addEventListener('load', function () {
   // Click/tap-to-toggle subnav, in addition to the existing hover behaviour,
   // so the dropdown menus also work on touch devices and via keyboard.
   let folderToggles = document.querySelectorAll(".folder-toggle");
+
+  function closeAllSubnavs() {
+    folderToggles.forEach(function (button) {
+      button.closest(".folder-collection").classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+    });
+  }
+
   folderToggles.forEach(function (button) {
     button.addEventListener('click', function () {
       let collection = button.closest(".folder-collection");
       let isOpen = collection.classList.contains("open");
-
-      folderToggles.forEach(function (otherButton) {
-        otherButton.closest(".folder-collection").classList.remove("open");
-        otherButton.setAttribute("aria-expanded", "false");
-      });
-
+      closeAllSubnavs();
       if (!isOpen) {
         collection.classList.add("open");
         button.setAttribute("aria-expanded", "true");
@@ -69,52 +58,17 @@ window.addEventListener('load', function () {
 
   document.addEventListener('click', function (event) {
     if (!event.target.closest(".folder-collection")) {
-      folderToggles.forEach(function (button) {
-        button.closest(".folder-collection").classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
-      });
+      closeAllSubnavs();
     }
   });
 
+  // This is a single-page site: subnav links jump to an in-page section,
+  // so close the dropdown once the user has picked a destination.
+  document.querySelectorAll(".subnavigationlist a").forEach(function (link) {
+    link.addEventListener('click', closeAllSubnavs);
+  });
+
 });
-
-function showContent(tab) {
-
-  let bio_tab = document.getElementById("Bio_tab");
-  let FAQs_tab = document.getElementById("FAQs_tab");
-  let Implementations_tab = document.getElementById("Implementations_tab");
-  let Academics_tab = document.getElementById("Academics_tab");
-  let btn1 = document.getElementById("BtnBio");
-  let btn2 = document.getElementById("BtnFAQs");
-  let btn3 = document.getElementById("BtnImplementations");
-  let btn4 = document.getElementById("BtnAcademics");
-
-  if (tab === "Bio" || tab === "FAQs") {
-
-    bio_tab.style.display = tab === "Bio" ? "block" : "none";
-    FAQs_tab.style.display = tab === "FAQs" ? "block" : "none";
-    btn1.classList.toggle("active", tab === "Bio");
-    btn2.classList.toggle("active", tab === "FAQs");
-
-  } else {
-
-    Implementations_tab.style.display = tab === "Implementations" ? "block" : "none";
-    Academics_tab.style.display = tab === "Academics" ? "block" : "none";
-    btn3.classList.toggle("active", tab === "Implementations");
-    btn4.classList.toggle("active", tab === "Academics");
-
-  }
-}
-
-function onLoading() {
-
-  document.getElementById("Bio_tab").style.display = "block";
-  document.getElementById("BtnBio").classList.add("active");
-
-  document.getElementById("Implementations_tab").style.display = "block";
-  document.getElementById("BtnImplementations").classList.add("active");
-
-}
 
 function copy_mail() {
   let email = document.getElementById("mail_text").textContent.trim();
