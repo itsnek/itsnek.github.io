@@ -374,12 +374,12 @@ html, body{
     text-align: justify;
 }
 
-.tabcontent #link{
+.tabcontent .inline-link{
     text-decoration: none;
     color: #360033;
 }
 
-.tabcontent #link:hover{
+.tabcontent .inline-link:hover{
     text-decoration: none;
     color: #0b9388;
     transition: 0.4s
