@@ -4,12 +4,7 @@ var txt = 'Nikos Siachamis...'; /* The text */
 var context = '|'
 var speed = 120; /* The speed/duration of the effect in milliseconds */
 
-window.addEventListener('load',() => {
-    let name = document.getElementById("name");
-    name.style.fontFamily = "Raleway";
-    name.style.textShadow = "0px 0px 10px #000000";
-    typeWriter();
-});
+window.addEventListener('load',() => typeWriter());
 
 function typeWriter() {
 
