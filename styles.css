@@ -56,7 +56,19 @@ html, body{
 }
 
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding: 24px 4% 10px;
     text-align: center;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 /* Home */
@@ -83,13 +95,14 @@ html, body{
 }
 
 .navigationlist {
-    margin: 0 auto;
+    margin: 0;
     max-width: 550px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .navigationlist .folder-collection{
@@ -201,19 +214,16 @@ html, body{
     border: 1px solid var(--border-strong);
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(0, 255, 156, 0.15), 0px 10px 15px 5px rgba(0, 0, 0, 0.6);
-    margin-top: 10%;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
 }
 
 .name {
-    text-align: center;
+    text-align: left;
     color : var(--text-primary);
-    font-size: 40px;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 26px;
+    margin: 0;
     text-shadow: 0 0 14px rgba(0, 255, 156, 0.25);
 }
 
@@ -229,9 +239,9 @@ html, body{
 
 .contact-options{
     color: var(--text-secondary);
-    margin-top: 20%;
+    margin: 0 0 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .contact-options::before{
@@ -240,11 +250,9 @@ html, body{
 }
 
 #contact{
-    position: relative;
-    bottom: 20px;
-    text-align:center;
+    text-align: center;
+    margin-top: 30px;
     scroll-margin-top: var(--header-offset);
-    /* margin-bottom: 5%; */
 }
 
 .centered{
@@ -348,13 +356,19 @@ html, body{
     font-weight: 700;
 }
 
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 40px;
+    align-items: start;
+    padding: 10px 4% 20px;
+}
+
 .who{
     position: relative;
-    margin-top: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 32px;
+    margin: 0 0 4px;
+    text-align: left;
+    font-size: 24px;
     color: var(--text-primary);
     font-weight: 700;
 }
@@ -367,9 +381,9 @@ html, body{
 .section-label {
     display: block;
     width: fit-content;
-    margin: 24px auto 10px;
-    padding: 8px 18px;
-    font-size: 16px;
+    margin: 14px 0 6px;
+    padding: 6px 14px;
+    font-size: 15px;
     font-weight: normal;
     text-align: center;
     border: 1px solid var(--accent);
@@ -380,15 +394,13 @@ html, body{
 }
 
 .tabcontent {
-    font-size: 16px;
-    padding: 6px 12px;
+    font-size: 15px;
+    padding: 0;
     color: var(--text-secondary);
     border-top: none;
     position: relative;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 20px;
-    text-align: justify;
+    margin: 0 0 10px;
+    text-align: left;
     line-height: 1.6;
 }
 
@@ -408,17 +420,13 @@ html, body{
     color: var(--text-muted);
 }
 
-.Portofolio{
-    text-align: center;
-}
-
 .downloadable{
+    display: inline-block;
     color: var(--accent);
     text-decoration: none;
     text-align: center;
     position: relative;
-    /* left: 16%; */
-    top: 20px;
+    margin-top: 6px;
 }
 
 .downloadable::before{
@@ -498,28 +506,39 @@ background: var(--accent-dim);
 @media only screen and (max-width: 600px) {
 
     html{
-        --header-offset: 80px;
+        --header-offset: 130px;
+    }
+
+    .header{
+        flex-direction: column;
+        padding: 16px 5% 6px;
     }
 
     .logo-image {
-        width: 35vw;
-        height: auto;
+        width: 48px;
+        height: 48px;
     }
 
     .name{
-        font-size: 28px;
+        font-size: 22px;
+    }
+
+    .content-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 6px 6% 16px;
+    }
+
+    .who{
+        font-size: 18px;
     }
 
     .tabcontent{
         font-size: 14px;
-        margin-left: 6%;
-        margin-right: 6%;
     }
 
     .downloadable{
         font-size: 12px;
-        position: relative;
-        top: -5px;
     }
 
     .folder-collection .subnavigationlist{
@@ -559,15 +578,11 @@ background: var(--accent-dim);
         font-size: 2.5vw;
     }
 
-    .who{
-        font-size: 4vw;
-    }
-
     .contact-options{
         font-size: 3vw;
     }
 
-    .subnavigationlist a{ 
+    .subnavigationlist a{
         font-size: 3vw;
     }
 
@@ -606,32 +621,43 @@ background: var(--accent-dim);
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
 
     html{
-        --header-offset: 100px;
+        --header-offset: 120px;
+    }
+
+    .header{
+        flex-direction: column;
+        padding: 18px 4% 6px;
     }
 
     .logo-image {
-        width: 35vw;
-        height: auto;
+        width: 56px;
+        height: 56px;
     }
 
     .name{
-        font-size: 4vw;
+        font-size: 24px;
     }
 
-    .subnavigationlist a{ 
+    .subnavigationlist a{
         font-size: 2vw;
     }
 
-    .subnavigationlist a:hover{ 
+    .subnavigationlist a:hover{
         font-size: calc(2vw + 2px);
     }
 
+    .content-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 8px 5% 18px;
+    }
+
     .section-label{
-        font-size: 2vw;
+        font-size: 14px;
     }
 
     .who{
-        font-size: 4vw;
+        font-size: 20px;
     }
 
     .contact-options{
