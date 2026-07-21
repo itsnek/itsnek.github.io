@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 
-<html> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta charset="UTF-8">
+<html lang="en">
 
     <head>
 
-        <title> Nikos Siachamis </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nikos Siachamis - Security Engineer. Bio, FAQs, portfolio implementations and academic background.">
+        <meta name="theme-color" content="#0b8793">
+
+        <meta property="og:title" content="Nikos Siachamis">
+        <meta property="og:description" content="Security Engineer - Bio, FAQs, portfolio implementations and academic background.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="./images/transparent_logo_new2.png">
+
+        <title>Nikos Siachamis</title>
 
         <link rel="stylesheet" href="styles.css"/>
         <link rel="shortcut icon" href="./images/tab_image_ico_b5H_icon.ico" type="image/x-icon" />
-        <script src="functions.js"></script>
-        <script src="cinematicLoad.js"></script>
+        <script src="functions.js" defer></script>
+        <script src="cinematicLoad.js" defer></script>
 
     </head>
 
@@ -23,9 +31,9 @@
 
                 <header class="header">
                     
-                    <img class="logo-image" src="./images/transparent_logo_new2.png" width="370px" height= "auto">
-                    
-                    <h2 class="name"><a><span id="name" class="my-name" ></span> <span id="cursor" class="input-cursor">|</span> </a></h2>
+                    <img class="logo-image" src="./images/transparent_logo_new2.png" width="370px" height="auto" alt="Nikos Siachamis logo">
+
+                    <h2 class="name"><span id="name" class="my-name"></span> <span id="cursor" class="input-cursor">|</span></h2>
 
                     <div>
                             
@@ -34,27 +42,27 @@
                             <ul class="navigationlist">
                                 
                                 <li class="folder-collection">
-                                    <button aria-haspopup="true" href="#" onClick="return false;" class="n">About me</button>
+                                    <button type="button" aria-haspopup="true" aria-expanded="false" class="n folder-toggle">About me</button>
                                     <div class="subnav">
                                         <ul id="first" class="subnavigationlist" >
-                                            
+
                                             <li class="page-collection">
                                                 <a href="#Bio" class="tablinks" onclick="showContent('Bio')">Bio</a>
                                             </li>
-                                        
+
                                             <li class="page-collection">
                                                 <a href="#FAQs" class="tablinks" onclick="showContent('FAQs')">FAQs</a>
-                                            </li>   
-                                                                    
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </li>
-                                
+
                                 <li class="folder-collection">
-                                    <button aria-haspopup="true" href="#" onClick="return false;" class="n">Portfolio</button>
+                                    <button type="button" aria-haspopup="true" aria-expanded="false" class="n folder-toggle">Portfolio</button>
                                     <div class="subnav">
                                         <ul id="second" class="subnavigationlist">
-                                            
+
                                             <li class="page-collection">
                                                 <a href="#Implementations" class="tablinks" onclick="showContent('Implementations')">Implementations </a>
                                             </li>
@@ -62,7 +70,7 @@
                                             <li class="page-collection">
                                                 <a href="#Academics" class="tablinks" onclick="showContent('Academics')">Academics</a>
                                             </li>
-                                            
+
                                         </ul>
                                     </div>
                                 </li>
@@ -162,13 +170,13 @@
                     <div id="Implementations_tab" class="tabcontent" >
                         <p>
                             I hope this site is a small taste of my skills.<br>
-                            You can find more projects that I've worked on in 
-                            <a id="link" href="https://github.com/itsnek?tab=repositories">Github</a>, as well as some on-going projects.
+                            You can find more projects that I've worked on in
+                            <a class="inline-link" href="https://github.com/itsnek?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>, as well as some on-going projects.
                         </p>
                     </div>
-                    
+
                     <div id="Academics_tab" class="tabcontent" >
-                        <p>Currently on a <a id="link" href="https://cybersecdatasci.cs.unipi.gr/">MSc</a>, in <b class="bold">Univercity of Pireaus</b>, with theme <b class="bold">"Cybersecurity and Data Science"</b> and selected track, <b class="bold">"Information and Communication Systems Security (ICSS)"</b>.</p>
+                        <p>Currently on a <a class="inline-link" href="https://cybersecdatasci.cs.unipi.gr/" target="_blank" rel="noopener noreferrer">MSc</a>, in <b class="bold">Univercity of Pireaus</b>, with theme <b class="bold">"Cybersecurity and Data Science"</b> and selected track, <b class="bold">"Information and Communication Systems Security (ICSS)"</b>.</p>
                     </div>
 
                     <a class="downloadable" href="./cv/CV_NIKOLAOS_SIACHAMIS.pdf" download> Download Resume <img id="download_icon" src="./images/logos/download-icon-white-png-1.png" width="35px" height="auto" alt="Download icon"></a>
@@ -182,15 +190,14 @@
                     <div class="centered">
                         <ul class="contact-list">
                             <li>
-                                <a class="link" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank"><img id="linkedin" class="logo" src="./images/logos/Linkedin-logo-1-550x550-300x300.png" width="45px" height="auto"></a>
+                                <a class="link" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img id="linkedin" class="logo" src="./images/logos/Linkedin-logo-1-550x550-300x300.png" width="45px" height="auto" alt="LinkedIn"></a>
                             </li>
                             <li>
-                                <a class="link"><img id="gmail" class="logo" src="./images/logos/Gmail-logo.png" width="70px" height="auto">
-                                    <div><input class="tooltiptext" type="text" value="nsiachamis@gmail.com" id="mail_text" readonly></div>
-                                </a>
+                                <button type="button" id="gmail" class="link" aria-label="Copy email address"><img class="logo" src="./images/logos/Gmail-logo.png" width="70px" height="auto" alt="Email"></button>
+                                <div><span class="tooltiptext" id="mail_text">nsiachamis@gmail.com</span></div>
                             </li>
                             <li>
-                                <a class="link" href="https://github.com/itsnek" target="_blank"><img class="logo" id="github" src="./images/logos/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" width="35px" height="auto"></a>
+                                <a class="link" href="https://github.com/itsnek" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img class="logo" id="github" src="./images/logos/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" width="35px" height="auto" alt="GitHub"></a>
                             </li>
                         </ul>
                     </div>
@@ -202,9 +209,9 @@
 
 
         <footer id="main_footer" class="main_footer">
-            © Copyright 2021 
-            <a class="reference" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank"> Nikos Siachamis</a>. Hosted by
-            <a class="reference" href="https://pages.github.com/" target="_blank"> GitHub Pages</a>.
+            © <span id="copyright-year"></span>
+            <a class="reference" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank" rel="noopener noreferrer"> Nikos Siachamis</a>. Hosted by
+            <a class="reference" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"> GitHub Pages</a>.
         </footer>      
 
     </body>
