@@ -8,7 +8,7 @@
     font-family: Raleway;
 }
 
-html{    
+html{
     /* background-image: url("./images/black-screen-1920x1080-awesome-black-screen-wallpaper-wallpapersafari-for-you-of-black-screen-1920x1080.jpg");
     width: 100%;
     height: 100%;
@@ -16,10 +16,13 @@ html{
     background-size:auto; */
     background-color: #0b8793; /* For browsers that do not support gradients */ /* 0b8793 couple love: #3a6186, #89253e  */
     background-image: linear-gradient(to bottom right, #360033, #0b937a);
+    scroll-behavior: smooth;
+    --header-offset: 115px;
 }
 
 html, body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 .glass_effect{
@@ -76,14 +79,13 @@ html, body{
 }
 
 .navigationlist {
-    margin: 0;
+    margin: 0 auto;
     max-width: 550px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
-    left: calc(50% - 300px);
 }
 
 .navigationlist .folder-collection{
@@ -173,11 +175,13 @@ html, body{
     display: block;
 } */
 
-.n:hover + .subnav > .subnavigationlist, .subnav:hover > .subnavigationlist{ 
+.n:hover + .subnav > .subnavigationlist,
+.subnav:hover > .subnavigationlist,
+.folder-collection.open .subnavigationlist{
     visibility: visible;
     opacity:1;
     list-style-type: none;
-} 
+}
 
 .logo-image {
     background: rgba(255,255,255,0.1);
@@ -222,6 +226,7 @@ html, body{
     position: relative;
     bottom: 20px;
     text-align:center;
+    scroll-margin-top: var(--header-offset);
     /* margin-bottom: 5%; */
 }
 
@@ -236,12 +241,14 @@ html, body{
 .contact-list{
     width: 35%;
     min-width: 240px;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
-    margin-left: -50px;
-    /* padding-top: 35px; */
+    gap: 20px;
+    padding: 0;
 }
 
 .contact-list li{
@@ -254,6 +261,12 @@ html, body{
 
 .link{
     display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
 }
 
 .link:hover{
@@ -278,19 +291,23 @@ html, body{
     overflow: hidden;
 }
 
-img#gmail + div{
+#gmail + div{
     visibility: hidden;
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
 }
 
-img#gmail:hover + div{
+#gmail:hover + div,
+#gmail:focus-visible + div,
+#gmail.copied + div{
     visibility: visible;
     opacity: 1;
 }
 
-img#gmail:hover + div > .tooltiptext{
+#gmail:hover + div > .tooltiptext,
+#gmail:focus-visible + div > .tooltiptext,
+#gmail.copied + div > .tooltiptext{
     display:block;
 }
 
@@ -375,8 +392,7 @@ img#gmail:hover + div > .tooltiptext{
 
 .anchor{
     display: block;
-    height: 115px; /*same height as header*/
-    margin-top: -115px; /*same height as header*/
+    scroll-margin-top: var(--header-offset);
     visibility: hidden;
 }
 
@@ -464,6 +480,10 @@ background: rgb(70, 50, 72);
 /* -- Mobiles -- */
 @media only screen and (max-width: 600px) {
 
+    html{
+        --header-offset: 80px;
+    }
+
     .logo-image {
         width: 35vw;
         height: auto;
@@ -474,7 +494,9 @@ background: rgb(70, 50, 72);
     }
 
     .tabcontent{
-        font-size: 12px;
+        font-size: 14px;
+        margin-left: 6%;
+        margin-right: 6%;
     }
 
     .downloadable{
@@ -488,7 +510,8 @@ background: rgb(70, 50, 72);
         padding: 0;
     }
 
-    .folder-collection:hover .subnavigationlist{
+    .folder-collection:hover .subnavigationlist,
+    .folder-collection.open .subnavigationlist{
         display: inline-block;
         text-align: center;
         padding-left: 30px;
@@ -497,9 +520,7 @@ background: rgb(70, 50, 72);
     .navigationlist {
         flex-direction: column;
         align-items: stretch;
-        /* align-items: center; */
-        position: static;
-        margin-right: 35px;
+        margin: 0;
     }
 
     .n, .fake-button{
@@ -566,6 +587,10 @@ background: rgb(70, 50, 72);
 
 /* Tablets and Desktop */
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
+
+    html{
+        --header-offset: 100px;
+    }
 
     .logo-image {
         width: 35vw;

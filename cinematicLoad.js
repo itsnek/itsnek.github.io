@@ -4,7 +4,12 @@ var txt = 'Nikos Siachamis...'; /* The text */
 var context = '|'
 var speed = 120; /* The speed/duration of the effect in milliseconds */
 
-window.addEventListener('load',() => typeWriter());
+window.addEventListener('load',() => {
+    let name = document.getElementById("name");
+    name.style.fontFamily = "Raleway";
+    name.style.textShadow = "0px 0px 10px #000000";
+    typeWriter();
+});
 
 function typeWriter() {
 
@@ -37,8 +42,6 @@ function typeWriter() {
         }
         i++;
 
+        setTimeout(typeWriter,speed);
     }
-    setTimeout(typeWriter,speed);
-    name.style.fontFamily= "Raleway"; // Titillium Web
-    name.style.textShadow= "0px 0px 10px #000000"
 }
