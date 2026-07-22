@@ -427,14 +427,6 @@ background: var(--accent-dim);
         font-size: 12px;
     }
 
-    #gmail + div{
-        display: none;
-    }
-
-    #gmail:hover + div{
-        display: none;
-    }
-
     .main_footer, .reference{
         height: fit-content;
         font-size: 10px;
@@ -470,14 +462,6 @@ background: var(--accent-dim);
 
     .tabcontent,.downloadable{
         font-size: 14px;
-    }
-
-    #gmail + div{
-        display: none;
-    }
-
-    #gmail:hover + div{
-        display: none;
     }
 
     .main_footer, .reference{
