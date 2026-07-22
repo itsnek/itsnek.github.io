@@ -156,17 +156,14 @@ html, body{
 
 .logo{
     width: 32px;
-    height: auto;
+    height: 32px;
+    object-fit: contain;
     filter: grayscale(1) brightness(1.3);
     transition: filter 0.3s;
 }
 
 .link:hover .logo{
     filter: none;
-}
-
-#github{
-    margin-top: 5px;
 }
 
 .link{
