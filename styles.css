@@ -431,11 +431,6 @@ background: var(--accent-dim);
         font-size: 12px;
     }
 
-    .main_footer, .reference{
-        height: fit-content;
-        font-size: 10px;
-    }
-
 }
 
 /* Tablets and Desktop */
@@ -466,10 +461,6 @@ background: var(--accent-dim);
 
     .tabcontent,.downloadable{
         font-size: 14px;
-    }
-
-    .main_footer, .reference{
-        font-size: 12px;
     }
 
 }
