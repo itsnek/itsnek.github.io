@@ -92,12 +92,12 @@ html, body{
 
 .logo-image {
     background: var(--panel);
-    background-size: contain;
+    object-fit: cover;
     border: 1px solid var(--border-strong);
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(0, 255, 156, 0.15), 0px 10px 15px 5px rgba(0, 0, 0, 0.6);
-    width: 64px;
-    height: 64px;
+    width: 84px;
+    height: 84px;
     flex-shrink: 0;
 }
 
@@ -393,8 +393,8 @@ background: var(--accent-dim);
     }
 
     .logo-image {
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
     }
 
     .name{
@@ -443,8 +443,8 @@ background: var(--accent-dim);
     }
 
     .logo-image {
-        width: 56px;
-        height: 56px;
+        width: 72px;
+        height: 72px;
     }
 
     .name{
