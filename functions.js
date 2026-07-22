@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
 
-  let footer = document.getElementById("main_footer");
   let copyrightYear = document.getElementById("copyright-year");
 
   if (copyrightYear) {
@@ -12,26 +11,6 @@ window.addEventListener('load', function () {
   }
 
   document.getElementById("gmail").addEventListener('click', () => copy_mail());
-
-  let hideFooterTimeout;
-  function showFooter() {
-    clearTimeout(hideFooterTimeout);
-    footer.style.visibility = "visible";
-    footer.style.opacity = "1";
-  }
-  function scheduleHideFooter() {
-    clearTimeout(hideFooterTimeout);
-    hideFooterTimeout = setTimeout(function () {
-      footer.style.opacity = "0";
-    }, 5000);
-  }
-
-  window.addEventListener('scroll', showFooter, { passive: true });
-  window.addEventListener('mousemove', showFooter);
-  window.addEventListener('touchstart', showFooter, { passive: true });
-
-  window.addEventListener("mouseout", scheduleHideFooter);
-  window.addEventListener("touchend", scheduleHideFooter);
 
   // All content lives in one box; the tabs just switch which pane is shown.
   let tabButtons = document.querySelectorAll(".box-tabs .tablinks");

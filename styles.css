@@ -96,8 +96,8 @@ html, body{
     border: 1px solid var(--border-strong);
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(0, 255, 156, 0.15), 0px 10px 15px 5px rgba(0, 0, 0, 0.6);
-    width: 84px;
-    height: 84px;
+    width: 112px;
+    height: 112px;
     flex-shrink: 0;
 }
 
@@ -282,6 +282,17 @@ html, body{
     display: block;
 }
 
+.tab-heading{
+    margin: 0 0 16px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tab-heading .prompt{
+    color: var(--accent);
+}
+
 .tabcontent span.marker{
     color: var(--accent);
     font-weight: 700;
@@ -335,19 +346,15 @@ b.bold{
 /* footer */
 
 .main_footer{
-    visibility: hidden;
+    position: static;
     width: 100%;
-    position: fixed;
-    bottom: 0;
     text-align: center;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 16px;
     padding: 5px;
     background-color: var(--panel);
     border-top: 1px solid var(--border);
     color: var(--text-muted);
-    opacity: 0;
-    transition: opacity 1s;
 }
 
 .reference{
@@ -393,8 +400,8 @@ background: var(--accent-dim);
     }
 
     .logo-image {
-        width: 60px;
-        height: 60px;
+        width: 76px;
+        height: 76px;
     }
 
     .name{
@@ -443,8 +450,8 @@ background: var(--accent-dim);
     }
 
     .logo-image {
-        width: 72px;
-        height: 72px;
+        width: 92px;
+        height: 92px;
     }
 
     .name{
