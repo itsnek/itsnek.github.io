@@ -33,40 +33,37 @@ window.addEventListener('load', function () {
   window.addEventListener("mouseout", scheduleHideFooter);
   window.addEventListener("touchend", scheduleHideFooter);
 
-  // Click/tap-to-toggle subnav, in addition to the existing hover behaviour,
-  // so the dropdown menus also work on touch devices and via keyboard.
-  let folderToggles = document.querySelectorAll(".folder-toggle");
+  // All content lives in one box; the tabs just switch which pane is shown.
+  let tabButtons = document.querySelectorAll(".box-tabs .tablinks");
 
-  function closeAllSubnavs() {
-    folderToggles.forEach(function (button) {
-      button.closest(".folder-collection").classList.remove("open");
-      button.setAttribute("aria-expanded", "false");
+  function activateTab(tabName) {
+    let button = document.querySelector(".box-tabs .tablinks[data-tab=\"" + tabName + "\"]");
+    let pane = document.getElementById(tabName + "_tab");
+    if (!button || !pane) return;
+
+    tabButtons.forEach(function (btn) {
+      btn.classList.remove("active");
+      btn.setAttribute("aria-selected", "false");
     });
+    document.querySelectorAll(".box-content .tabcontent").forEach(function (content) {
+      content.classList.remove("active");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-selected", "true");
+    pane.classList.add("active");
   }
 
-  folderToggles.forEach(function (button) {
+  tabButtons.forEach(function (button) {
     button.addEventListener('click', function () {
-      let collection = button.closest(".folder-collection");
-      let isOpen = collection.classList.contains("open");
-      closeAllSubnavs();
-      if (!isOpen) {
-        collection.classList.add("open");
-        button.setAttribute("aria-expanded", "true");
-      }
+      activateTab(button.dataset.tab);
     });
   });
 
-  document.addEventListener('click', function (event) {
-    if (!event.target.closest(".folder-collection")) {
-      closeAllSubnavs();
-    }
-  });
-
-  // This is a single-page site: subnav links jump to an in-page section,
-  // so close the dropdown once the user has picked a destination.
-  document.querySelectorAll(".subnavigationlist a").forEach(function (link) {
-    link.addEventListener('click', closeAllSubnavs);
-  });
+  let initialTab = window.location.hash.replace("#", "");
+  if (initialTab && document.querySelector(".box-tabs .tablinks[data-tab=\"" + initialTab + "\"]")) {
+    activateTab(initialTab);
+  }
 
 });
 

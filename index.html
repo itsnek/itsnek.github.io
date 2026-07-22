@@ -36,159 +36,101 @@
                         <h2 class="name"><span id="name" class="my-name"></span> <span id="cursor" class="input-cursor">|</span></h2>
                     </div>
 
-                    <div>
-
-                        <nav class="main-nav" data-content-field="navigation">
-
-                            <ul class="navigationlist">
-                                
-                                <li class="folder-collection">
-                                    <button type="button" aria-haspopup="true" aria-expanded="false" class="n folder-toggle">About me</button>
-                                    <div class="subnav">
-                                        <ul id="first" class="subnavigationlist" >
-
-                                            <li class="page-collection">
-                                                <a href="#Bio">Bio</a>
-                                            </li>
-
-                                            <li class="page-collection">
-                                                <a href="#FAQs">FAQs</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="folder-collection">
-                                    <button type="button" aria-haspopup="true" aria-expanded="false" class="n folder-toggle">Portfolio</button>
-                                    <div class="subnav">
-                                        <ul id="second" class="subnavigationlist">
-
-                                            <li class="page-collection">
-                                                <a href="#Implementations">Implementations</a>
-                                            </li>
-
-                                            <li class="page-collection">
-                                                <a href="#Academics">Academics</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="folder-collection">
-                                    <a class="fake-button" href="#contact" >Contact</a>
-                                </li>
-                                
-                            </ul>
-
-                        </nav>
-
+                    <div class="header-contact">
+                        <p class="contact-options">
+                            You can find me at :
+                        </p>
+                        <ul class="contact-list">
+                            <li>
+                                <a class="link" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img id="linkedin" class="logo" src="./images/logos/Linkedin-logo-1-550x550-300x300.png" width="45px" height="auto" alt="LinkedIn"></a>
+                            </li>
+                            <li>
+                                <button type="button" id="gmail" class="link" aria-label="Copy email address"><img class="logo" src="./images/logos/Gmail-logo.png" width="70px" height="auto" alt="Email"></button>
+                                <div><span class="tooltiptext" id="mail_text">nsiachamis@gmail.com</span></div>
+                            </li>
+                            <li>
+                                <a class="link" href="https://github.com/itsnek" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img class="logo" id="github" src="./images/logos/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" width="35px" height="auto" alt="GitHub"></a>
+                            </li>
+                        </ul>
                     </div>
 
                 </header>
 
-                <div class="content-grid">
+                <div class="terminal-box">
 
-                <div class="About_me">
-
-                    <header class="who">
-                        Who I am.
-                    </header>
-
-                    <h3 id="Bio" class="section-label">Bio</h3>
-                    <div class="tabcontent">
-                        <p>
-                            I'm Nikos, a Security Engineer and post-student of the department of informatics at Athens Univercity of Economics and Business. 
-                            After graduating from school, 2nd lyceum in Alimos(southern department of Athens), it was time for me to 
-                            decide what steps I'm going to take considering my career future.
-                            <br>
-                            Curious as to how this little machines can produce so much work, enough to make everyone depending on them, 
-                            I decided to follow the path of computer science and since then I haven't looked back. It's been an amazing 
-                            experience for me and each day I learn something new. My hunger for exploring every inch of this science may 
-                            be the reason why I'm still not aware of what exactly should I focus on. Theses days, taking into consideration my likes 
-                            and goals, I focus on security and cloud engineering which seem to suit me better, but who knows what the future holds for me. 
-                            I guess we'll learn in the process! 
-                            Take a better look of me by searching the rest of the stuff and feel free to contact me for more information. 
-                            <br>
-                            I'm waiting..!
-                            <span class="catchy_phrase"> 
-                                *typing nervously*
-                            </span>
-                        </p>
+                    <div class="box-tabs" role="tablist">
+                        <button type="button" class="tablinks active" data-tab="Bio" role="tab" aria-selected="true">Bio</button>
+                        <button type="button" class="tablinks" data-tab="FAQs" role="tab" aria-selected="false">FAQs</button>
+                        <button type="button" class="tablinks" data-tab="Implementations" role="tab" aria-selected="false">Implementations</button>
+                        <button type="button" class="tablinks" data-tab="Academics" role="tab" aria-selected="false">Academics</button>
                     </div>
 
-                    <h3 id="FAQs" class="section-label">FAQs</h3>
-                    <div class="tabcontent">
-                        <p>
-                            <span class="marker"> > </span> How old are you?<br>
-                            I'm 25 years old.<br><br>
+                    <div class="box-content">
 
-                            <span class="marker"> > </span>  Hobbies/likings?<br>
-                            Playing basketball, playing guitar, having walks in sunset and listening to music. 
-                            I also like to dance, I am actually a member of a folk dancing club. <br><br>
-
-                            <span class="marker"> > </span>  Languages?<br>
-                            My native language is greek. I also have excellent 
-                            command of english and a good level in german<br><br>
-
-                            <span class="marker"> > </span>  What about programming languages?<br>
-                            Mainly I've been using Java, first language to 
-                            learn and in full use since then. Currently, using a lot Spring-boot framework.<br>
-                            Python seems charming too, lately I've been using a lot, mostly generating scripts.<br>
-                            Additionally, bash scripts and jenkinsfile/groovy scripts for CI/CD are on my tool-list.<br>
-                            Ansible entry level<br>
-                            C++, one big project and many hours of use.<br>C, assembly entry level<br>
-                            Javascript, Html and css at a good level<br>
-                            Next goal is Go, just started learning.<br><br>
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="Portofolio">
-
-                    <header class="who">
-                        My work.
-                    </header>
-
-                    <h3 id="Implementations" class="section-label">Implementations</h3>
-                    <div class="tabcontent">
-                        <p>
-                            I hope this site is a small taste of my skills.<br>
-                            You can find more projects that I've worked on in
-                            <a class="inline-link" href="https://github.com/itsnek?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>, as well as some on-going projects.
-                        </p>
-                    </div>
-
-                    <h3 id="Academics" class="section-label">Academics</h3>
-                    <div class="tabcontent">
-                        <p>Currently on a <a class="inline-link" href="https://cybersecdatasci.cs.unipi.gr/" target="_blank" rel="noopener noreferrer">MSc</a>, in <b class="bold">Univercity of Pireaus</b>, with theme <b class="bold">"Cybersecurity and Data Science"</b> and selected track, <b class="bold">"Information and Communication Systems Security (ICSS)"</b>.</p>
-                    </div>
-
-                    <a class="downloadable" href="./cv/CV_NIKOLAOS_SIACHAMIS.pdf" download> Download Resume <img id="download_icon" src="./images/logos/download-icon-white-png-1.png" width="35px" height="auto" alt="Download icon"></a>
-
-                    <footer id="contact">
-                        <p class="contact-options">
-                            You can find me at :
-                        </p>
-                        <div class="centered">
-                            <ul class="contact-list">
-                                <li>
-                                    <a class="link" href="https://www.linkedin.com/in/nikos-siachamis-b3296b1b7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img id="linkedin" class="logo" src="./images/logos/Linkedin-logo-1-550x550-300x300.png" width="45px" height="auto" alt="LinkedIn"></a>
-                                </li>
-                                <li>
-                                    <button type="button" id="gmail" class="link" aria-label="Copy email address"><img class="logo" src="./images/logos/Gmail-logo.png" width="70px" height="auto" alt="Email"></button>
-                                    <div><span class="tooltiptext" id="mail_text">nsiachamis@gmail.com</span></div>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://github.com/itsnek" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img class="logo" id="github" src="./images/logos/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" width="35px" height="auto" alt="GitHub"></a>
-                                </li>
-                            </ul>
+                        <div id="Bio_tab" class="tabcontent active" role="tabpanel">
+                            <p>
+                                I'm Nikos, a Security Engineer and post-student of the department of informatics at Athens Univercity of Economics and Business.
+                                After graduating from school, 2nd lyceum in Alimos(southern department of Athens), it was time for me to
+                                decide what steps I'm going to take considering my career future.
+                                <br>
+                                Curious as to how this little machines can produce so much work, enough to make everyone depending on them,
+                                I decided to follow the path of computer science and since then I haven't looked back. It's been an amazing
+                                experience for me and each day I learn something new. My hunger for exploring every inch of this science may
+                                be the reason why I'm still not aware of what exactly should I focus on. Theses days, taking into consideration my likes
+                                and goals, I focus on security and cloud engineering which seem to suit me better, but who knows what the future holds for me.
+                                I guess we'll learn in the process!
+                                Take a better look of me by searching the rest of the stuff and feel free to contact me for more information.
+                                <br>
+                                I'm waiting..!
+                                <span class="catchy_phrase">
+                                    *typing nervously*
+                                </span>
+                            </p>
                         </div>
-                    </footer>
 
-                </div>
+                        <div id="FAQs_tab" class="tabcontent" role="tabpanel">
+                            <p>
+                                <span class="marker"> > </span> How old are you?<br>
+                                I'm 25 years old.<br><br>
+
+                                <span class="marker"> > </span>  Hobbies/likings?<br>
+                                Playing basketball, playing guitar, having walks in sunset and listening to music.
+                                I also like to dance, I am actually a member of a folk dancing club. <br><br>
+
+                                <span class="marker"> > </span>  Languages?<br>
+                                My native language is Greek. I also hold a C2 (Michigan) certificate in English and a B2 (Goethe) certificate in German.<br><br>
+
+                                <span class="marker"> > </span>  What about programming languages?<br>
+                                On the language side, mainly Python, Java, Ruby, C++, SQL and JavaScript (plus Shell/Bash for everything else), with Spring-Boot, Ansible and Robot-Framework in the mix.<br>
+                                Day to day that means working across AWS (SecurityHub/GuardDuty), Docker, Kubernetes, Terraform, Elasticsearch/Kibana, Cloudflare, Jenkins, CrowdStrike, Burp Suite and Git/GitHub Actions &mdash; mostly for cloud security, CI/CD, testing, automation and monitoring.<br><br>
+                            </p>
+                        </div>
+
+                        <div id="Implementations_tab" class="tabcontent" role="tabpanel">
+                            <p>
+                                Currently a <b class="bold">Security Engineer at Skroutz</b> (since Apr 2023), working on DevSecOps, cloud security (AWS SecurityHub/GuardDuty, Terraform), SIEM monitoring and Bug Bounty triage.
+                                <br><br>
+                                Before that: Junior DevOps Engineer at <b class="bold">ITML</b>, and IT Support/System Administrator at the <b class="bold">Hellenic National Defence General Staff</b>.
+                                <br><br>
+                                My thesis, <a class="inline-link" href="https://dione.lib.unipi.gr/xmlui/handle/unipi/19486" target="_blank" rel="noopener noreferrer">"Mitigation Techniques for Prompt Injection Attacks"</a>, proposes an encryption-based defense against LLM prompt injection.
+                                <br><br>
+                                You can find more projects on <a class="inline-link" href="https://github.com/itsnek?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>, as well as some on-going projects.
+                            </p>
+                        </div>
+
+                        <div id="Academics_tab" class="tabcontent" role="tabpanel">
+                            <p>
+                                <b class="bold">M.Sc. in Cybersecurity and Data Science</b>, University of Piraeus (2023 - 2026), track <b class="bold">"Information and Communication Systems Security (ICSS)"</b>, graduating June 2026 (average 9.72).
+                                <br><br>
+                                <b class="bold">B.Sc. in Computer Science and Informatics</b>, Athens University of Economics and Business (2017 - 2022, average 7.39).
+                                <br><br>
+                                Certified: <b class="bold">Kubernetes Administrator (CKA)</b>, Linux Foundation (Dec 2025).
+                            </p>
+
+                            <a class="downloadable" href="./cv/CV_NIKOLAOS_SIACHAMIS.pdf" download> Download Resume <img id="download_icon" src="./images/logos/download-icon-white-png-1.png" width="35px" height="auto" alt="Download icon"></a>
+                        </div>
+
+                    </div>
 
                 </div>
 
