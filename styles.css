@@ -242,9 +242,22 @@ body{
 
 .box-tabs{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: var(--bg);
     border-bottom: 1px solid var(--border-strong);
+}
+
+.tablist{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-tabs .downloadable{
+    margin: 0;
+    padding: 0 20px;
+    white-space: nowrap;
 }
 
 .box-tabs .tablinks{
@@ -417,10 +430,21 @@ background: var(--accent-dim);
         margin: 6px 6% 20px;
     }
 
+    .tablist{
+        flex: 1 1 100%;
+    }
+
     .box-tabs .tablinks{
         flex: 1 1 auto;
         padding: 10px 8px;
         font-size: 12px;
+    }
+
+    .box-tabs .downloadable{
+        flex: 1 1 100%;
+        text-align: center;
+        padding: 8px 0;
+        border-top: 1px solid var(--border-strong);
     }
 
     .box-content{
